@@ -80,6 +80,7 @@ module "ec2_instance" {
   name = "Jenkins-server"
 
   instance_type               = var.instance_type
+  ami                         = data.aws_ami.instance_ami.id
   key_name                    = var.key_name
   monitoring                  = true
   vpc_security_group_ids      = [module.sg.security_group_id]
