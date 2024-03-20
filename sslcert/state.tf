@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "sockshop"
-    key    = "state-host-machine"
+    key    = "state-ssl"
     region = "us-east-1"
   }
 }
