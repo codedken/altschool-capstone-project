@@ -4,3 +4,5 @@ eks-cluster/.terraform/*
 eks-cluster/.terraform.lock.hcl
 kubernetes/*/.terraform/*
 kubernetes/*/.terraform.lock.hcl
+sslcert/.terraform/*
+sslcert/.terraform.lock.hcl

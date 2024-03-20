@@ -2,9 +2,9 @@ provider "acme" {
   server_url = var.acme_server_url
 }
 
-# data "aws_route53_zone" "hosted_zone" {
-#   name = var.common_name
-# }
+data "aws_route53_zone" "hosted_zone" {
+  name = "prayandcode.com.ng"
+}
 
 resource "tls_private_key" "private_key" {
   algorithm = "RSA"
@@ -23,10 +23,10 @@ resource "acme_certificate" "certificate" {
   dns_challenge {
     provider = "route53"
 
-    # config = {
-    #   AWS_HOSTED_ZONE_ID = data.aws_route53_zone.hosted_zone.zone_id
-    # }
+    config = {
+      AWS_HOSTED_ZONE_ID = data.aws_route53_zone.hosted_zone.zone_id
+    }
   }
 
-  # depends_on = [acme_registration.registration]
+  depends_on = [acme_registration.registration]
 }
