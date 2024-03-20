@@ -1,0 +1,6 @@
+host-machine-config/.terraform/*
+host-machine-config/.terraform.lock.hcl
+eks-cluster/.terraform/*
+eks-cluster/.terraform.lock.hcl
+kubernetes/*/.terraform/*
+kubernetes/*/.terraform.lock.hcl
