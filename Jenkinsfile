@@ -68,19 +68,19 @@ pipeline {
             }
         }
 
-        stage("Create and validate SSL certificate") {
-            when {
-                expression { params.ENVIRONMENT == 'create' }
-            }
-            steps {
-                script {
-                    dir('sslcert') {
-                        sh "terraform init"
-                        sh "terraform apply -auto-approve"
-                    }
-                }
-            }
-        }
+        // stage("Create and validate SSL certificate") {
+        //     when {
+        //         expression { params.ENVIRONMENT == 'create' }
+        //     }
+        //     steps {
+        //         script {
+        //             dir('sslcert') {
+        //                 sh "terraform init"
+        //                 sh "terraform apply -auto-approve"
+        //             }
+        //         }
+        //     }
+        // }
 
        
 
